@@ -9,7 +9,9 @@ import Foundation
 
 class ViewModel {
 
-    func userTriggeredButton() {
+    var text = Observable("")
 
+    func userTriggeredButton() {
+        text.value = "Hello"
     }
 }

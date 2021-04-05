@@ -11,16 +11,20 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
 
-    private var viewModel: ViewModel?
+    private var viewModel: ViewModel = ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = ViewModel()
+        viewModel.text.bind { helloText in
+            DispatchQueue.main.async {
+                self.label.text = helloText
+            }
+        }
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        viewModel?.userTriggeredButton()
+        viewModel.userTriggeredButton()
     }
 
 }
