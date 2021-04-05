@@ -11,12 +11,16 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
 
+    private var viewModel: ViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        viewModel = ViewModel()
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
+        viewModel?.userTriggeredButton()
     }
 
 }
