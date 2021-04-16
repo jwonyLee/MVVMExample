@@ -1,6 +1,6 @@
 # MVVMExample
 
-> 이 예제는 `Observable` 클래스를 이해하면 90%는 이해한 예제다. 그렇지만, 나는 이해하는 게 너무 어려웠다. 클로저가 어렵네😢
+> 이 예제는 `Observable` 클래스를 이해하면 90%는 이해한 예제다. 그렇지만, 나는 이해하는 게 너무 어려웠다. 클로저를 저장한다는 개념이 어려웠다. 😢
 
 `ViewController`의 `label`과 `ViewModel`이 갖고 있는 `text`는 어떻게 연결되어 있을까?
 
@@ -40,7 +40,7 @@ viewModel.text.bind { helloText in
 }
 ```
 
-`value` 값이 바뀌면, 후행 클로저 `helloText`로 `value`가 캡쳐되고(?) 클로저 내부를 실행한다.
+`value` 값이 바뀌면, 저장된 클로저에 `value`를 넣어 실행한다.
 
 
 ## 참고 자료
