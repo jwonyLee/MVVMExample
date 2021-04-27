@@ -1,5 +1,11 @@
 # MVVMExample
 
+## 동작 화면
+버튼을 터치하면 label의 숫자가 올라가는 단순한 예제
+
+![Simulator Screen Shot - iPhone 11 - 2021-04-27 at 16 55 03](https://user-images.githubusercontent.com/15073405/116206016-51315100-a779-11eb-90a9-b87c7efb0e36.png)
+
+
 ## Property Observer로 구현한 MVVM
 
 > 이 예제는 `Observable` 클래스를 이해하면 90%는 이해한 예제다. 그렇지만, 나는 이해하는 게 너무 어려웠다. 클로저를 저장한다는 개념이 어려웠다. 😢
