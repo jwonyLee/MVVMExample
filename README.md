@@ -3,7 +3,7 @@
 ## 동작 화면
 버튼을 터치하면 label의 숫자가 올라가는 단순한 예제
 
-![Simulator Screen Shot - iPhone 11 - 2021-04-27 at 16 55 03](https://user-images.githubusercontent.com/15073405/116206016-51315100-a779-11eb-90a9-b87c7efb0e36.png)
+<img src="https://user-images.githubusercontent.com/15073405/116206016-51315100-a779-11eb-90a9-b87c7efb0e36.png" alt="Property Observer 동작 화면" width="300"/><img src="https://user-images.githubusercontent.com/15073405/116206338-a5d4cc00-a779-11eb-888a-a9851704f34a.png" alt="RxSwift 동작 화면" width="300"/>
 
 
 ## Property Observer로 구현한 MVVM
