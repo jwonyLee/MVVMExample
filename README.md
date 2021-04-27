@@ -44,6 +44,34 @@ viewModel.text.bind { helloText in
 
 `value` 값이 바뀌면, 저장된 클로저에 `value`를 넣어 실행한다.
 
+## RxSwift로 똑같이 동작하게 작성해보자.
+
+- 이제 RxSwift를 공부하는 입장에서 작성한 것이므로, 이것이 옳은 방법이란 보장은 하지 않음.
+- 예제 코드는 곰튀김님의 [ViewModel을 만들어서 사용해 봅시다.](https://www.youtube.com/watch?v=sZjwyvY-xUM)를 참고하여 작성했음!
+
+```swift
+viewModel.valuePS
+    .map { String($0) }
+    .observe(on: MainScheduler.instance)
+    .bind(to: label.rx.text)
+    .disposed(by: disposeBag)
+
+```
+
+`valuePS` 값을 문자열로 변경(map), 메인 스레드에서 `label.rx.text`로 바인드 한다. `valuePS`는 `value` 값이 변경될 때마다 `didSet`으로 `onNext(value)` 스트림을 넘겨받는다. (?)
+
+```swift
+var value = 0 {
+    didSet {
+        valuePS.onNext(value)
+    }
+}
+var valuePS = PublishSubject<Int>()
+
+func userTriggeredButton() {
+    value += 1
+}
+```
 
 ## 참고 자료
 
