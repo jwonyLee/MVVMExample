@@ -12,7 +12,7 @@ class ViewModel {
     var text = Observable("0")
 
     func userTriggeredButton() {
-        if var value = Int(text.value) {
+        if let value = Int(text.value) {
             text.value = "\(value + 1)"
         }
     }

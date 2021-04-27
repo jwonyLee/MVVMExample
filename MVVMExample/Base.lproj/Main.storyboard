@@ -57,7 +57,7 @@
         <!--RxSwift-->
         <scene sceneID="Sqb-Th-9px">
             <objects>
-                <viewController id="9PS-88-JEH" sceneMemberID="viewController">
+                <viewController id="9PS-88-JEH" customClass="RxSwiftViewController" customModule="MVVMExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ma-JI-kxl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-J8-nlM">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtP-r1-ztu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtP-r1-ztu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="372.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
@@ -75,6 +75,9 @@
                                         <rect key="frame" x="0.0" y="396.5" width="414" height="372.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="9PS-88-JEH" eventType="touchUpInside" id="XRk-dQ-KA0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -89,6 +92,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="RxSwift" image="moon.stars" catalog="system" selectedImage="moon.stars.fill" id="3VR-9R-PRc"/>
+                    <connections>
+                        <outlet property="label" destination="vtP-r1-ztu" id="eVX-uq-mRx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poF-eL-7gG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

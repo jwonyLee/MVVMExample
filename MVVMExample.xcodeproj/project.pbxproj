@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		870BC3D826379F42000CD52B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 870BC3D726379F42000CD52B /* .swiftlint.yml */; };
+		87CFA37E2637CFA800D438D4 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CFA37D2637CFA800D438D4 /* RxSwiftViewController.swift */; };
+		87CFA3802637CFBB00D438D4 /* RxSwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CFA37F2637CFBB00D438D4 /* RxSwiftViewModel.swift */; };
 		87D7ABAD261B312500A494C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7ABAC261B312500A494C6 /* AppDelegate.swift */; };
 		87D7ABAF261B312500A494C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7ABAE261B312500A494C6 /* SceneDelegate.swift */; };
 		87D7ABB1261B312500A494C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7ABB0261B312500A494C6 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		037E39498C2F828A58724D9A /* Pods-MVVMExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExample.debug.xcconfig"; path = "Target Support Files/Pods-MVVMExample/Pods-MVVMExample.debug.xcconfig"; sourceTree = "<group>"; };
 		538168154C651BE0CB1123C7 /* Pods-MVVMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExample.release.xcconfig"; path = "Target Support Files/Pods-MVVMExample/Pods-MVVMExample.release.xcconfig"; sourceTree = "<group>"; };
 		870BC3D726379F42000CD52B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		87CFA37D2637CFA800D438D4 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		87CFA37F2637CFBB00D438D4 /* RxSwiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewModel.swift; sourceTree = "<group>"; };
 		87D7ABA9261B312500A494C6 /* MVVMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D7ABAC261B312500A494C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87D7ABAE261B312500A494C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				87D7ABB0261B312500A494C6 /* ViewController.swift */,
+				87CFA37D2637CFA800D438D4 /* RxSwiftViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				87D7ABC2261B31E900A494C6 /* ViewModel.swift */,
+				87CFA37F2637CFBB00D438D4 /* RxSwiftViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 			files = (
 				87D7ABB1261B312500A494C6 /* ViewController.swift in Sources */,
 				87D7ABC8261B32AD00A494C6 /* Observable.swift in Sources */,
+				87CFA37E2637CFA800D438D4 /* RxSwiftViewController.swift in Sources */,
 				87D7ABAD261B312500A494C6 /* AppDelegate.swift in Sources */,
 				87D7ABC3261B31E900A494C6 /* ViewModel.swift in Sources */,
+				87CFA3802637CFBB00D438D4 /* RxSwiftViewModel.swift in Sources */,
 				87D7ABAF261B312500A494C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
