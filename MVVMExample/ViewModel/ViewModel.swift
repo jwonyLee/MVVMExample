@@ -9,9 +9,11 @@ import Foundation
 
 class ViewModel {
 
-    var text = Observable("")
+    var text = Observable("0")
 
     func userTriggeredButton() {
-        text.value = "Hello"
+        if var value = Int(text.value) {
+            text.value = "\(value + 1)"
+        }
     }
 }
