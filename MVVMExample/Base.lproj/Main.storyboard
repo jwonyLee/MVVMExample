@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbb-67-YtE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Property Observer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVMExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,16 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-Wc-Vfo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoQ-Y0-ju6">
-                                        <rect key="frame" x="197.5" y="0.0" width="19.5" height="397"/>
+                                        <rect key="frame" x="197.5" y="0.0" width="19.5" height="372.5"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-0e-KqL">
-                                        <rect key="frame" x="184" y="421" width="46" height="397"/>
+                                        <rect key="frame" x="162.5" y="396.5" width="89" height="372.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZV-ZC-X04"/>
@@ -44,16 +45,79 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tes-Wc-Vfo" secondAttribute="trailing" id="tO9-0H-oLV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Property Observer" image="sun.max" catalog="system" selectedImage="sun.max.fill" id="sws-II-9kX"/>
                     <connections>
                         <outlet property="label" destination="hoQ-Y0-ju6" id="Hxg-9y-YPD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="108"/>
+            <point key="canvasLocation" x="2228" y="-361"/>
+        </scene>
+        <!--RxSwift-->
+        <scene sceneID="Sqb-Th-9px">
+            <objects>
+                <viewController id="9PS-88-JEH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ma-JI-kxl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-J8-nlM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtP-r1-ztu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="372.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUe-oU-vRg">
+                                        <rect key="frame" x="0.0" y="396.5" width="414" height="372.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GO5-Sy-ipe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GO5-Sy-ipe" firstAttribute="bottom" secondItem="c7f-J8-nlM" secondAttribute="bottom" id="Kg6-SK-yjV"/>
+                            <constraint firstItem="GO5-Sy-ipe" firstAttribute="trailing" secondItem="c7f-J8-nlM" secondAttribute="trailing" id="fJo-on-VnJ"/>
+                            <constraint firstItem="c7f-J8-nlM" firstAttribute="leading" secondItem="GO5-Sy-ipe" secondAttribute="leading" id="urf-iE-Z5x"/>
+                            <constraint firstItem="c7f-J8-nlM" firstAttribute="top" secondItem="GO5-Sy-ipe" secondAttribute="top" id="wQo-q9-H1M"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="RxSwift" image="moon.stars" catalog="system" selectedImage="moon.stars.fill" id="3VR-9R-PRc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="poF-eL-7gG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="448"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7AB-rA-EGs">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zbb-67-YtE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jkM-YA-22T">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Kho-xm-j8I"/>
+                        <segue destination="9PS-88-JEH" kind="relationship" relationship="viewControllers" id="FLC-ua-gge"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3c5-7q-Lco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218.840579710145" y="107.8125"/>
         </scene>
     </scenes>
     <resources>
+        <image name="moon.stars" catalog="system" width="128" height="124"/>
+        <image name="moon.stars.fill" catalog="system" width="128" height="124"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
