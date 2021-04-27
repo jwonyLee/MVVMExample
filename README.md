@@ -1,5 +1,7 @@
 # MVVMExample
 
+## Property Observer로 구현한 MVVM
+
 > 이 예제는 `Observable` 클래스를 이해하면 90%는 이해한 예제다. 그렇지만, 나는 이해하는 게 너무 어려웠다. 클로저를 저장한다는 개념이 어려웠다. 😢
 
 `ViewController`의 `label`과 `ViewModel`이 갖고 있는 `text`는 어떻게 연결되어 있을까?
